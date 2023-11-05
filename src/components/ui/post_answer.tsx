@@ -96,7 +96,7 @@ export default function PostAnswer({
           }
         }}
         id={`answer`}
-        placeholder="Write your answer here..."
+        placeholder="Give a brief about your answer here..."
       />
 
       <Dialog>
