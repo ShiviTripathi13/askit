@@ -53,9 +53,7 @@ export default async function PostsPage() {
               <p className={`mb-2 line-clamp-3 text-muted-foreground`}>
                 {post.description}
               </p>
-              {/* code for comment box starts here */}
               
-              {/* code for comment box ends here */}
 
               <div className={`space-x-2`}>
                 {post.categories.length > 0 ? (
@@ -68,6 +66,49 @@ export default async function PostsPage() {
                   <></>
                 )}
               </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </PageWrapper>
+  );
+}
+
+export async function AnswersPage() {
+  
+   const answers = await api.ans.fetchAll.query();
+
+  return (
+    <PageWrapper className={`pt-16`}>
+      <div className={`p-6`}>
+        <h1 className={`mb-6 text-xl font-bold`}>Posted Answers</h1>
+        {answers.map((ans) => (
+          <Link key={ans.id} href={`/posts/${ans.id}/`}>
+            <div
+              className={`mb-4 rounded-xl border p-6 transition-all duration-300 ease-in-out hover:cursor-pointer hover:border-primary`}
+            >
+              <div className={`mb-3 flex items-center justify-between`}>
+                <h2 className={`font-bold`}>{ans.title}</h2>
+                <p className={`text-end text-sm text-muted-foreground`}>
+                  {howLongAgo(ans.createdAt)}
+                </p>
+              </div>
+              <p className={`mb-2 line-clamp-3 text-muted-foreground`}>
+                {ans.description}
+              </p>
+              
+
+              {/* <div className={`space-x-2`}>
+                {ans.categories.length > 0 ? (
+                  post.categories.map((category, index) => (
+                    <Badge key={index} variant="outline">
+                      {category}
+                    </Badge>
+                  ))
+                ) : (
+                  <></>
+                )}
+              </div> */}
             </div>
           </Link>
         ))}

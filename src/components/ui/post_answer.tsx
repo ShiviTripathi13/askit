@@ -108,6 +108,7 @@ export default function PostAnswer({ isSignedIn }: { isSignedIn: boolean }) {
           if (event.target.value.length == 0) {
             return;
           }
+          //chech here
           setAnswer(event.target.value);
         }}
         onKeyDown={(event) => {
@@ -200,7 +201,7 @@ export default function PostAnswer({ isSignedIn }: { isSignedIn: boolean }) {
               variant={`outline`}
             >
               Post
-              
+
             </Button>
           </form>
          </DialogContent>

@@ -9,7 +9,9 @@ export default async function Home() {
 
   return (
     <PageWrapper>
-      <main className="flex min-h-screen flex-col items-center justify-center space-y-6">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-background: #355c7d 
+  bg-background: -webkit-linear-gradient(to right, #355c7d, #6c5b7b, #c06c84) 
+  background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84) space-y-6">
         <div className={`text-center`}>
           <h1 className="mb-2 flex items-center justify-center text-4xl font-bold">
             Askit
