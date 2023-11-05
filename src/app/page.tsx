@@ -1,6 +1,5 @@
 import { getServerAuthSession } from "~/server/auth";
 import Link from "next/link";
-import SignoutButton from "~/components/signout-button";
 import { PageWrapper } from "~/components/page-transition-wrapper";
 import AskQuestion from "~/components/ask-question";
 
@@ -24,7 +23,7 @@ export default async function Home() {
         <p className={`text-sm text-muted-foreground`}>
           Just wanna answer questions?{" "}
           <Link
-            href={`/posts`}
+            href={`/posts/allposts/0`}
             className={`ml-2 text-foreground hover:underline`}
           >
             View all questions here -&gt;
